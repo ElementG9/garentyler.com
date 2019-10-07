@@ -1,0 +1,25 @@
+{
+  "name": "garentyler.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElementG9/garentyler.com.git"
+  },
+  "author": "ElementG9",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ElementG9/garentyler.com/issues"
+  },
+  "homepage": "https://github.com/ElementG9/garentyler.com#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "pug": "^2.0.4"
+  }
+}
