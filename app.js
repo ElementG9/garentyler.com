@@ -19,6 +19,12 @@ app.get('/pivot', (req, res) => {
   res.render('pivot/index');
 });
 // Serve static files.
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(`${__dirname}/public/favicon.ico`);
+});
+app.get('/img/:file', (req, res) => {
+  res.sendFile(`${__dirname}/public/images/${req.params.file}`);
+});
 app.get('/css/:file', (req, res) => {
   res.sendFile(`${__dirname}/public/css/${req.params.file}`);
 });

@@ -3,9 +3,23 @@ head
   meta(charset='utf-8')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet', href='/css/main.css')
-  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap')
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.6/vue.min.js") /* Load Vue. */
-  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js") /* Load jQuery. */
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.6/vue.min.js")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
   block head
 body
+  .topnav#topnav
+    a(href='/') #[img(src='/img/G_logo.svg', alt='G Logo')]
+    a(href='/pivot') Pivot
+    a(href='javascript:void(0);', onclick='openResponsiveNav()').icon #[i.fa.fa-bars]
+  script.
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function openResponsiveNav() {
+      var x = document.getElementById("topnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
   block body
