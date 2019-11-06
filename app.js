@@ -15,8 +15,11 @@ app.set('views', `${__dirname}/views/`);
 app.get('/', (req, res) => {
   res.render('index');
 });
-app.get('/pivot', (req, res) => {
-  res.render('pivot/index');
+app.get('/guides', (req, res) => {
+  res.render('guides/index');
+});
+app.get('/guides/:guide', (req, res) => {
+  res.render(`guides/${req.params.guide}/index`);
 });
 app.get('/50shadesofspacegray', (req, res) => {res.redirect('https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313.TR11.TRC1.A0.H0.Xspace+gray+iphone+6s.TRS0&_nkw=space+gray+iphone+6s&_sacat=0');});
 // Serve static files.
