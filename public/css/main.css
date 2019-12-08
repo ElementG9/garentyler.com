@@ -100,7 +100,7 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .breadcrumbs {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 50vw;
 }
 
-h1 {
+h1, .breadcrumbs {
   font-size: 42px;
   margin: 20px 0px;
   margin-top: 45px;
@@ -182,4 +182,8 @@ code {
   background-color: #ccc;
   padding: 5px;
   margin: 5px;
+}
+
+.breadcrumbs {
+  max-width: 75vw;
 }
