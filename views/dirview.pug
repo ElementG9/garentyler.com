@@ -1,0 +1,21 @@
+extends template.pug
+block head
+  title #{breadcrumbs.slice(-1)[0].text} | Garen Tyler
+block body
+  h1(style='display:none') #{breadcrumbs.map(b => b.text).join(' / ')}
+  - breadcrumbs = breadcrumbs.map((b, i) => { b.i = i; return b; });
+  .breadcrumbs
+    each b in breadcrumbs
+      if b.i + 1 != breadcrumbs.length
+        a(href=b.url, style='font-size: 42px') #{b.text}
+        p(style='display:inline; font-size: 42px')  / 
+      else
+        a(href=b.url, style='font-size: 42px') #{b.text}
+  if typeof itemsLabel != 'undefined'
+    h3 #{itemsLabel}
+  if items.length != 0
+    ul
+      each item in items
+        li #[a(href=`${url}/${item}`) #{item}]
+  else
+    p There are no items in this directory.
