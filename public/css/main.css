@@ -111,6 +111,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0px;
   max-width: 50vw;
 }
+@media (max-width:600px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    max-width: 75vw;
+  }
+}
 
 h1 {
   font-size: 42px;
@@ -182,4 +188,27 @@ code {
   background-color: #ccc;
   padding: 5px;
   margin: 5px;
+}
+
+/* Flexbox */
+.fv, .fh, .fcv, .fch {
+  display: flex;
+}
+
+.fv, .fcv {
+  flex-direction: column;
+}
+
+.fh, .fch {
+  flex-direction: row;
+}
+
+.fcv, .fch {
+  justify-content: center;
+}
+
+@media (max-width:600px) {
+  .fh {
+    flex-direction: column;
+  }
 }

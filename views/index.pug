@@ -1,22 +1,55 @@
 extends template.pug
 block head
   title Garen Tyler
+  style.
+    .vertical-paragraph {
+      max-width: 50vw;
+    }
+    @media (max-width:600px) {
+      .vertical-paragraph {
+        max-width: 75vw;
+      }
+      h1 {
+        text-align: center;
+      }
+    }
 block body
-  h1 Hi, I'm Garen!
-  h2 About Me
-  .indent
-    p I'm a sophomore in high school, and I program, mountain bike, and ski for fun. I mountain bike and ski competitively with my school, but I program for fun. I started out on #[a(href='https://scratch.mit.edu/') Scratch], then I learned a little Python. Eventually, I took the #[a(href='https://www.khanacademy.org/computing/computer-programming#programming') Intro to JS course] on #[a(href='https://www.khanacademy.org/') Khan Academy] and learned the basics of JavaScript. Since then, I've learned to make web apps using #[a(href='https://nodejs.org/en/') Node.js] and #[a(href='https://expressjs.com/') Express]. Using Node.js and Express, I've made a few professional web apps for my dad. These include #[a(href='https://easyintakeforms.com/') Easy Intake Forms], the #[a(href='https://www.dvminsider.com/vet500/') Vet500 voting software], and the #[a(href='https://www.idahosbest.com/') 2019 Idaho's Best voting software]. Now, I'm trying to learn how programming languages work by making Pivot, C by making ghOSt, and iOS App Development by making Clander.
-  h2 My Main Projects
-  .indent
-    h3 Pivot
-    .indent
-      p Pivot is my experimental programming language. The goal is to better understand what compilers do and how programming languages work. Check it out on #[a(href='https://github.com/ElementG9/Pivot') GitHub].
+  mixin vertical-paragraph(title)
+    .fch
+      .fv
+        .fch
+          h3(id != attributes.id)= title
+        block
     .sv
-    h3 ghOSt
-    .indent
-      p ghOSt is my experimental operating system. The goal is to better understand what operating systems do and the scale of current operating systems. Check it out on #[a(href='https://github.com/ElementG9/ghOSt') GitHub].
-    .sv
-    h3 Clander
-    .indent
-      p Clander is a simple calendar app. I'm working on it with my friend #[a(href='https://khimno.com/') Danton]. Check it out on #[a(href='https://github.com/ElementG9/Clander') GitHub].
-  
+  .content
+    .fch
+      h1 Hi, I'm Garen!
+    .fch
+      .fv
+        .fch
+          h2#about About Me
+        p.vertical-paragraph I'm a sophomore in high school, and I program, mountain bike, and ski for fun. I mountain bike and ski competitively with my school, but I program for fun. I started out on #[a(href='https://scratch.mit.edu/') Scratch], then I learned a little Python. Eventually, I took the #[a(href='https://www.khanacademy.org/computing/computer-programming#programming') Intro to JS course] on #[a(href='https://www.khanacademy.org/') Khan Academy] and learned the basics of JavaScript. Since then, I've learned to make web apps using #[a(href='https://nodejs.org/en/') Node.js] and #[a(href='https://expressjs.com/') Express]. Using Node.js and Express, I've made a few professional web apps for #[a(href='https://inboundsystems.com/') Inbound Systems]. These include #[a(href='#easyintakeforms') Easy Intake Forms], the #[a(href='#vet500') Vet500] nationwide voting software, and the #[a(href='#idahosbest') Idaho's Best] local voting software. I'd heard about Rust before, but I decided to take a deeper look at it than a simple "Hello world!" project. I took interest in it and started to learn it by #[a(href='#rust-experiments') making projects] at the beginning of 2020.
+    hr.smallhr
+    .fch
+      .fv
+        .fch
+          h2#professional-projects Professional Projects
+        +vertical-paragraph('Easy Intake Forms')#easyintakeforms
+          p.vertical-paragraph Easy Intake Forms was a relatively simple project - rewrite a form using Flash with modern HTML5. This was my first professional project, and it used a simple Linux, NodeJS, and Express stack. Some loading was done client-side, with JQuery and AJAX. The main page is #[a(href='https://easyintakeforms.com/') here].
+        +vertical-paragraph('Vet500')#vet500
+          p.vertical-paragraph The Vet500 is a voting platform comparing veterinarians and animal hospitals across the country. By the end of voting in September 2019, it recieved over 3,600 unique votes. This was my first voting platform, and it required knowing Linux server management, NodeJS and Express web servers, Firebase, and Twilio to verify valid phone numbers. Learn more about it #[a(href='https://www.dvminsider.com/vet500/') here].
+        +vertical-paragraph('Idaho\'s Best')#idahosbest
+          p.vertical-paragraph Idaho's Best is similar to Vet500 in how it functions, but it's targeted for Idaho businesses instead of nationwide veterinarians. The voting for 2020 just recently finished in October, and we recieved over 26,000 votes from about 14,000 unique voters with verified phone numbers. It has been my largest and most widely used project to date. Learn more about it #[a(href='https://www.idahosbest.com/') here].
+    hr.smallhr
+    .fch
+      .fv
+        .fch
+          h2#fun-projects Fun Projects
+        +vertical-paragraph('Pivot')#pivot
+          p.vertical-paragraph Pivot is my experimental programming language. The goal is to better understand what compilers do and how programming languages work. Check it out on #[a(href='https://github.com/ElementG9/Pivot') GitHub].
+        +vertical-paragraph('ghOSt')#ghost
+          p.vertical-paragraph ghOSt is my experimental operating system. I'm trying to better understand what operating systems do and the scale of current operating systems. Check it out on #[a(href='https://github.com/ElementG9/ghOSt') GitHub].
+        +vertical-paragraph('Clander')#clander
+          p.vertical-paragraph Clander is a simple calendar app. I was working on it with my friend #[a(href='https://khimno.com/') Danton]. Check it out on #[a(href='https://github.com/ElementG9/Clander') GitHub].
+        +vertical-paragraph('Rust Experiments')#rust-experiments
+          p.vertical-paragraph This isn't so much a project, but a collection of smaller projects. These smaller projects range from basic I/O to the beginnings of a Minecraft server written in Rust. Take a look at the code #[a(href='https://github.com/ElementG9/rust-experiments') here].

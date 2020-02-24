@@ -8,6 +8,7 @@ head
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
   block head
 body
+  #top
   .topnav#topnav
     a(href='/') #[img(src='/img/G_logo.svg', alt='G Logo')]
     a(href='https://github.com/ElementG9') My GitHub
@@ -23,5 +24,4 @@ body
         x.className = "topnav";
       }
     }
-  .content
-    block body
+  block body
