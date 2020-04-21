@@ -16,7 +16,19 @@ app.set("views", `${__dirname}/views/`);
 app.get("/", (req, res) => {
   res.render("index");
 });
-app.get("/file/:filename", (req, res) => {
+app.get("/files", (req, res) => {
+  let path = "/public/static";
+  fs.readdir(`${__dirname}${path}`, function(err, files) {
+    if (err) {
+      return console.log("Unable to scan directory: " + err);
+    }
+    res.render("files", {
+      directory: path,
+      files: files
+    });
+  });
+});
+app.get("/files/:filename", (req, res) => {
   res.sendFile(`${__dirname}/public/static/${req.params.filename}`);
 });
 // Projects.
