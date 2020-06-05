@@ -149,11 +149,12 @@ li {
 }
 
 a {
-  color: #009444;
+  color: #00A651;
   text-decoration: none;
 }
 
 a:hover {
+  color: #009444;
   text-decoration: underline;
 }
 
