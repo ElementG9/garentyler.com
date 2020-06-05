@@ -1,21 +1,22 @@
 doctype html
 head
-  meta(charset='utf-8')
-  meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  link(rel='stylesheet', href='/css/main.css')
-  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  link(rel="stylesheet", href="/css/main.css")
+  //- link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  //- link(rel="stylesheet", href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css")
+  script(src="https://kit.fontawesome.com/36181e1eaf.js", crossorigin="anonymous")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.6/vue.min.js")
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
   block head
 body
   #top
   .topnav#topnav
-    a(href='/') #[img(src='/img/G_logo.svg', alt='G Logo')]
-    a(href='https://github.com/ElementG9') My GitHub
-    a(href='/projects') Projects
-    a(href='/guides') Guides
-    a(href='/files') Files
-    a(href='javascript:void(0);', onclick='openResponsiveNav()').icon #[i.fa.fa-bars]
+    a(href="/") #[img(src="/img/G_logo.svg", alt="G Logo")]
+    a(href="https://github.com/ElementG9") #[i(style="padding-right: 4px;").fa.fa-github] GitHub
+    a(href="/projects") #[i(style="padding-right: 4px;").fas.fa-code] Projects
+    a(href="mailto:garentyler@gmail.com") #[i(style="padding-right: 4px;").far.fa-envelope] Contact
+    a(href="javascript:void(0);", onclick="openResponsiveNav()").icon #[i.fa.fa-bars]
   script.
     /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
     function openResponsiveNav() {

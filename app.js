@@ -16,33 +16,8 @@ app.set("views", `${__dirname}/views/`);
 app.get("/", (req, res) => {
   res.render("index");
 });
-app.get("/files", (req, res) => {
-  let path = "/public/static";
-  fs.readdir(`${__dirname}${path}`, function(err, files) {
-    if (err) {
-      return console.log("Unable to scan directory: " + err);
-    }
-    res.render("files", {
-      directory: path,
-      files: files
-    });
-  });
-});
-app.get("/files/:filename", (req, res) => {
-  res.sendFile(`${__dirname}/public/static/${req.params.filename}`);
-});
-// Projects.
 app.get("/projects", (req, res) => {
-  res.render("projects/index");
-});
-// Guides.
-app.get("/guides", (req, res) => {
-  res.render("guides/index");
-});
-app.get("/guides/:guide", (req, res) => {
-  if (fs.existsSync(`${__dirname}/views/guides/${req.params.guide}/index.pug`))
-    res.render(`guides/${req.params.guide}/index`);
-  else res.status(404).render("404");
+  res.render("projects");
 });
 
 // Joke paths
@@ -64,13 +39,16 @@ app.get("/img/:file", (req, res) => {
 app.get("/css/:file", (req, res) => {
   res.sendFile(`${__dirname}/public/css/${req.params.file}`);
 });
+
 // Error pages.
-app.use((req, res) => {
+let error404 = (req, res) => {
   // 404 Error
   res.status(404);
   res.render("404");
-});
-app.use((error, req, res, next) => {
+};
+app.get("/404", error404);
+app.use(error404);
+let error500 = (error, req, res, next) => {
   // 500 Error
   console.error(error);
   res.status(500);
@@ -78,7 +56,9 @@ app.use((error, req, res, next) => {
     title: "500: Internal Server Error",
     error: error
   });
-});
+};
+app.get("/500", error500);
+app.use(error500);
 /* - Listening - */
 app.listen(3000, () => {
   console.log("Server listening on port 3000.");

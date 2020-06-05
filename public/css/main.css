@@ -8,8 +8,6 @@ body {
   padding-top: 0px;
 }
 
-/* Top Nav */
-
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -78,7 +76,6 @@ body {
   }
 }
 
-/* Spacers */
 .sh, .sv {
   visibility: hidden;
 }
@@ -152,12 +149,11 @@ li {
 }
 
 a {
-  color: #00a651;
+  color: #009444;
   text-decoration: none;
 }
 
 a:hover {
-  color: #009444;
   text-decoration: underline;
 }
 
@@ -165,7 +161,7 @@ a:hover {
   padding-left: 16px;
 }
 
-/* hr styling */
+
 hr {
   margin: 36px 0px;
   padding: 0px;
@@ -190,7 +186,7 @@ code {
   margin: 5px;
 }
 
-/* Flexbox */
+
 .fv, .fh, .fcv, .fch {
   display: flex;
 }
@@ -210,5 +206,25 @@ code {
 @media (max-width:600px) {
   .fh {
     flex-direction: column;
+  }
+}
+
+.vertical-paragraph {
+  max-width: 50vw;
+}
+@media (max-width:1000px) {
+  .vertical-paragraph {
+    max-width: 60vw;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+@media (max-width:600px) {
+  .vertical-paragraph {
+    max-width: 75vw;
+  }
+  h1 {
+    text-align: center;
   }
 }
