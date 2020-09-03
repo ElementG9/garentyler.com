@@ -22,12 +22,20 @@
       web applications, mostly for
       #[a(href="https://www.inboundsystems.com/", target="_blank") Inbound Systems].
       Singlehandedly, I made
-      #[router-link(to="/projects#easyintakeforms") Easy Intake Forms]
-      for registering new dental patients, and the Vet500, Idaho’s Best, and Best of SLC voting apps.
+      #[a(href="https://easyintakeforms.com/", target="_blank") Easy Intake Forms]
+      for registering new dental patients, and the
+      #[a(href="https://www.dvminsider.com/vet500/", target="_blank") Vet500],
+      #[a(href="https://www.idahosbest.com/", target="_blank") Idaho's Best], and
+      #[a(href="https://www.bestofslc.com/", target="_blank") Best of SLC] voting apps.
       I’ve also worked in a team with other developers on more complicated projects such as Best of Awards
-      for creating and managing those voting apps automatically, and RevenueJump for increasing the number and
-      quality of reviews. Programming isn’t just for work though! I’ve also been experimenting with
-      Rust, OpenGL, and Unity as some of my many side projects.
+      for creating and managing those voting apps automatically, and
+      #[a(href="https://www.revenuejump.com/", target="_blank") RevenueJump]
+      for increasing the number and quality of reviews. Programming isn’t just
+      for work though! I’ve also been experimenting with
+      #[a(href="https://www.rust-lang.org/", target="_blank") Rust],
+      #[a(href="https://www.opengl.org/", target="_blank") OpenGL],
+      and #[a(href="https://unity.com/", target="_blank") Unity]
+      as some of my many side projects.
 </template>
 
 <script lang="ts">

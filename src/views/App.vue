@@ -18,17 +18,20 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
+html,
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0px !important;
+  padding: 0px !important;
+  width: 100% !important;
+  height: 100% !important;
 
   // Light theme.
   // background-color: #f2f2f2;
   // color: #2c3e50;
 
   // Dark theme.
-  background-color: #222;
-  color: #f2f2f2;
+  // background-color: #222;
+  // color: #f2f2f2;
 }
 * {
   margin: 0px;
@@ -43,16 +46,6 @@ body {
 
   a {
     text-decoration: none;
-    // Light theme.
-    // color: #00a651;
-    // Dark theme.
-    color: #2fbf72;
-    &:hover {
-      // Light theme.
-      // color: #009444;
-      // Dark theme.
-      color: #26995b;
-    }
   }
 
   h1 {
