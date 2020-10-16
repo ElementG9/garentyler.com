@@ -37,8 +37,8 @@
       helps businesses to get more 5-star reviews by sending out small surveys.
       When I started working on this, the app was fully built and functional, but
       running on #[a(href="https://angularjs.org/", target="_blank") AngularJS],
-      a framework from 2010. Currently, I'm leading the migration to
-      #[a(href="https://angular.io/", target="_blank") Angular 2.0+].
+      a framework from 2010. Currently, I'm working on a team to migrate to
+      #[a(href="https://vuejs.org/", target="_blank") Vue].
     hr.smallhr
     h2 Personal Projects
     Project(projectName="Pivot")#pivot.
@@ -49,9 +49,6 @@
       #[a(href="https://github.com/ElementG9/ghOSt", target="_blank") ghOSt]
       is my experimental operating system. I'm trying to better understand
       what operating systems do and the scale of current operating systems.
-    Project(projectName="Clander")#clander.
-      #[a(href="https://github.com/ElementG9/Clander", target="_blank") Clander]
-      is a simple calendar app. I was working on it with my friend #[a(href="https://khimno.com/#/", target="_blank") Danton].
     Project(projectName="Composition")#composition.
       #[a(href="https://github.com/Unary-Byte-Software/Composition", target="_blank") Composition]
       is a fast Minecraft server targeting version 1.8.9, and I'm also working
@@ -61,6 +58,11 @@
       is a basic client-server application for factoring large numbers on
       a cluster of #[a(href="https://www.raspberrypi.org/", target="_blank") Raspberry Pis].
       Our cluster happens to have 12 Pis, thus the name DodecaPi.
+    Project(projectName="GlassCannon")#dodecapi-software.
+      #[a(href="https://github.com/Unary-Byte-Software/GlassCannon", target="_blank") GlassCannon]
+      is a web server built to serve static files extremely fast from RAM. Our target
+      with it is to match/beat #[a(href="https://www.litespeedtech.com/products/litespeed-web-server", target="_blank") LiteSpeed]
+      in raw performance.
 </template>
 
 <script lang="ts">
